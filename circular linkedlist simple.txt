@@ -1,0 +1,26 @@
+at end :
+new = (struct node*)malloc(sizeof(structnode));
+scanf("%d",&value);
+new --> data = value ;
+tail --> next = new;
+new --> next = head;
+tail = new ;
+
+at beginning:
+ new = (struct node*)malloc(sizeof(structnode));
+scanf("%d",&value);
+new --> data = value;
+new --> next = head;
+tail --> next = new;
+head = new ;
+
+at specific position:
+new = (struct node*)malloc(sizeof(structnode));
+scanf("%d",&value);
+scanf("%d",&pos);
+temp =head;
+for(i=0 ; i<pos -1 ; i++)
+temp = temp --> next ;
+new --> data = value;
+new --> next = temp --> next;
+temp --> next = new; 
